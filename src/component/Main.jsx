@@ -2,12 +2,13 @@ import React from 'react';
 import Header from './Header';
 import Banner from './Banner';
 import Footer from './Footer';
+import Chefs from './Chefs';
 
 const Main = () => {
     return (
         <div>
-            <Header></Header>
             <Banner></Banner>
+            <Chefs></Chefs>
             <Footer></Footer>
         </div>
     );

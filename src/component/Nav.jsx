@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
-const Nav = () => {
+const Nav = ({children}) => {
+    const {user,image}=useContext(AuthContext);
+    console.log(user)
+
   return (
     <nav className="w-4/5 mx-auto mt-8">
       <div className="navbar bg-base-100 justify-between">
@@ -13,11 +17,12 @@ const Nav = () => {
           <Link className="btn btn-ghost normal-case text-xl">Shop</Link>
         </div>
 
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        {user ? 
           <div className="w-10 rounded-full">
-            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-          </div>
-        </label>
+            <img src={image} />
+          </div> : 
+          <Link to="/login"><button>Login</button></Link>
+        }
       </div>
       
     </nav>
