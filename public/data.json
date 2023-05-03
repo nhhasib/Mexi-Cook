@@ -1,0 +1,63 @@
+    [
+        {
+        "id": 1,
+        "name": "Gordon Ramsay",
+        "years_of_experience": 30,
+        "num_of_recipes": 500,
+        "image": "https://d3a005dv9q91mu.cloudfront.net/uploads/2016/03/Frontera-10FEB2016-GALDONES-PHOTOGRAPHY-12-e1458242836944.jpg",
+        "recipes": [
+          {
+            "id": 1,
+            "name": "Beef Wellington",
+            "cooking_method": "Oven",
+            "ingredients": ["beef fillet", "mushrooms", "puff pastry", "prosciutto", "English mustard", "egg", "olive oil", "salt", "pepper"],
+            "rating": 4.5
+          },
+          {
+            "id": 2,
+            "name": "Shepherd's Pie",
+            "cooking_method": "Stovetop and oven",
+            "ingredients": ["ground lamb", "carrots", "onions", "peas", "beef broth", "Worcestershire sauce", "butter", "flour", "milk", "salt", "pepper", "nutmeg", "potatoes"],
+            "rating": 4.2
+          },
+          {
+            "id": 3,
+            "name": "Lobster Risotto",
+            "cooking_method": "Stovetop",
+            "ingredients": ["lobster tails", "arborio rice", "white wine", "chicken broth", "shallots", "garlic", "butter", "parmesan cheese", "lemon juice", "salt", "pepper"],
+            "rating": 4.7
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Jamie Oliver",
+        "years_of_experience": 25,
+        "num_of_recipes": 350,
+        "image": "https://example.com/jamie-oliver.jpg",
+        "recipes": [
+          {
+            "id": 1,
+            "name": "Roast Chicken",
+            "cooking_method": "Oven",
+            "ingredients": ["whole chicken", "lemons", "garlic", "thyme", "butter", "salt", "pepper"],
+            "rating": 4.4
+          },
+          {
+            "id": 2,
+            "name": "Pesto Pasta",
+            "cooking_method": "Stovetop",
+            "ingredients": ["pasta", "basil", "garlic", "pine nuts", "parmesan cheese", "olive oil", "lemon juice", "salt", "pepper"],
+            "rating": 4.1
+          },
+          {
+            "id": 3,
+            "name": "Fish and Chips",
+            "cooking_method": "Fryer",
+            "ingredients": ["cod fillets", "potatoes", "flour", "baking powder", "beer", "malt vinegar", "salt"],
+            "rating": 4.7
+          }
+        ]
+      }
+    ]
+  

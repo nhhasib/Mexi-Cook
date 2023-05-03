@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import { Outlet } from 'react-router-dom';
+import Banner from './Banner';
 
 const Header = () => {
     return (
