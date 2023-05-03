@@ -1,23 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+
+    const {loginUser,logOut}=useContext(AuthContext);
+    console.log(loginUser);
+
+    const handleLogin=event=>{
+        const form=event.target;
+        const email=form.email.value;
+        const password=form.password.value;
+        // loginUser(email,password)
+        // .then(result)
+    }
+
   return (
     <div className="w-1/2 mx-auto my-10">
-      <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
+                <div class="text-center mb-10">
+                    <h1 class="font-bold text-3xl text-gray-900">LOGIN</h1>
+                    <p>Login to your Account</p>
+                </div>
 
-      <form className="mt-6" action="#" method="POST">
-        <div>
-          <label className="block text-gray-700">Email Address</label>
-          <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required/>
-        </div>
+      <form className="mt-6" action="#" method="POST" onSubmit={handleLogin}>
+      <div class="flex -mx-3">
+                        <div class="w-full px-3 mb-5">
+                            <label for="" class="text-xs font-semibold px-1">Email</label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                                <input type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter your email" name="email"/>
+                            </div>
+                        </div>
+                    </div>
 
-        <div className="mt-4">
-          <label className="block text-gray-700">Password</label>
-          <input type="password" name="" id="" placeholder="Enter Password" minlength="6" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none" required/>
-        </div>
+                    <div class="flex -mx-3">
+                        <div class="w-full px-3 mb-8">
+                            <label for="" class="text-xs font-semibold px-1">Password</label>
+                            <div class="flex">
+                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                <input type="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter your password" name="password"/>
+                            </div>
+                        </div>
+                    </div>
 
-        <div className="text-right mt-2">
+        <div className="text-center mb-6">
           <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
         </div>
         <div className="text-center"><button className="w-1/2">Login</button></div>
@@ -40,8 +66,8 @@ const Login = () => {
             </div>
           </button>
 
-      <p className="mt-8">Need an account? <a href="#" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
-              account</a></p>
+      <p className="mt-8">Need an account? <Link to="/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
+              account</Link></p>
 
 
     </div>

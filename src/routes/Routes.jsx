@@ -3,6 +3,7 @@ import Main from "../component/Main";
 import { Children } from "react";
 import Header from "../component/Header";
 import Login from "../component/chef/Login";
+import Register from "../component/Register";
 
 const router=createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router=createBrowserRouter([
             {
                 path:"/login",
                 element:<Login></Login>
+            },
+            {
+                path:"/register",
+                element:<Register></Register>
             }
         ]
     },
