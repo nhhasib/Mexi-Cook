@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Nav = ({children}) => {
-    const {user,logOut}=useContext(AuthContext);
+    const {user,logOut,setLoading}=useContext(AuthContext);
     // console.log(user.photoURL)
 
     const handleLogout=()=>{
       logOut()
       .then(() => {
-        console.log("singout")
+        console.log("signout")
       })
       .catch((error) => {
         console.log(error)
       });
+      setLoading(false)
+
       
     }
     console.log(user)

@@ -27,7 +27,7 @@ const router=createBrowserRouter([
             },
             {
                 path:"/chef/:id",
-                element:<ChefDetails></ChefDetails>
+                element:<PrivateRoutes><ChefDetails></ChefDetails></PrivateRoutes>
             },
             {
                 path:"/blog",

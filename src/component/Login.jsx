@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
 import app from "../../config_firebase";
 
 const Login = ({children}) => {
 
-    const {loginUser,logOut,googleLogin,setUser,gitLogin,user}=useContext(AuthContext);
+    const {loginUser,logOut,googleLogin,setUser,gitLogin,user,setLoading}=useContext(AuthContext);
+    const navigate=useNavigate();
 
     const handleLogin=event=>{
+        event.preventDefault();
         const form=event.target;
         const email=form.email.value;
         const password=form.password.value;
@@ -19,7 +21,9 @@ const Login = ({children}) => {
                 const loggedUser=result.user;
                 console.log(loggedUser)
                 setUser(loggedUser);
-                form.reset()
+                navigate('/'),
+                form.reset(),
+                setLoading(false)
             }
             )
         .catch(error=>{

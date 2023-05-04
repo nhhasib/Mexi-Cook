@@ -61,6 +61,7 @@ const AuthProvider = ({children}) => {
         chef,
         setChef,
         setUser,
+        setLoading,
         setRecipes,
         createUser,
         loginUser,
