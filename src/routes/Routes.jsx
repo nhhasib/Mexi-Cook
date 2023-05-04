@@ -2,8 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../component/Main";
 import { Children } from "react";
 import Header from "../component/Header";
-import Login from "../component/chef/Login";
 import Register from "../component/Register";
+import Login from "../component/Login";
+import ChefDetails from "../component/ChefDetails";
+import Blog from "../component/Blog";
 
 const router=createBrowserRouter([
     {
@@ -21,6 +23,14 @@ const router=createBrowserRouter([
             {
                 path:"/register",
                 element:<Register></Register>
+            },
+            {
+                path:"/chef/:id",
+                element:<ChefDetails></ChefDetails>
+            },
+            {
+                path:"/blog",
+                element:<Blog></Blog>
             }
         ]
     },

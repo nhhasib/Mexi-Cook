@@ -1,13 +1,18 @@
 import React from 'react';
 import './Chef.css'
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Chef = ({chefData}) => {
     const {id,image,name,recipesNum,experience}=chefData;
     // console.log(chefData);
+    const {setRecipes}=useContext(AuthContext);
 
     const handleRecipe=()=>{
-        const recipe=chefData.recipes;
-        console.log(recipe)
+        const recipes=chefData.recipes;
+        console.log(recipes);
+        setRecipes(recipes);
     }
 
     return (
@@ -20,7 +25,7 @@ const Chef = ({chefData}) => {
             <h1>Experience: {experience} years</h1>
             <h1>Number of Recipes: {recipesNum}+</h1>
             </div>
-            <button onClick={handleRecipe}>View Recipes</button>
+            <Link to="/chef/:id"><button onClick={handleRecipe}>View Recipes</button></Link>
         </div>
     );
 };

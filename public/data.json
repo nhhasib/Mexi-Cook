@@ -7,7 +7,7 @@
         "image": "https://d3a005dv9q91mu.cloudfront.net/uploads/2016/03/Frontera-10FEB2016-GALDONES-PHOTOGRAPHY-12-e1458242836944.jpg",
         "recipes": [
           {
-            "id": 1,
+            "r_id": 1,
             "name": "Beef Wellington",
             "cooking_method": "Oven",
             "ingredients": ["beef fillet", "mushrooms", "puff pastry", "prosciutto", "English mustard", "egg", "olive oil", "salt", "pepper"],
