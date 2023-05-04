@@ -8,7 +8,7 @@ const ChefDetails = () => {
     const {id,image,name,recipesNum,experience}=chef;
     
     return (
-        <div className='w-11/12'>
+        <div className='w-11/12 mx-auto'>
             <div className='img-container'>
                 <img src={image} alt="" />
             </div>

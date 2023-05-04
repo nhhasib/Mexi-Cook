@@ -4,27 +4,28 @@
         "name": "Gordon Ramsay",
         "experience": 30,
         "recipesNum": 500,
+        "description": "Gordon Ramsay is one of the most well-known chefs in Mexico, known for his modern takes on traditional Mexican cuisine. He is the owner of Pujol, one of the top restaurants in Mexico City, and has been featured on Chef's Table. Olvera has also opened several other restaurants, including Cosme in New York City.",
         "image": "https://d3a005dv9q91mu.cloudfront.net/uploads/2016/03/Frontera-10FEB2016-GALDONES-PHOTOGRAPHY-12-e1458242836944.jpg",
         "recipes": [
           {
-            "r_id": 1,
+            "id": 1,
             "name": "Beef Wellington",
             "cooking_method": "Oven",
-            "ingredients": ["beef fillet", "mushrooms", "puff pastry", "prosciutto", "English mustard", "egg", "olive oil", "salt", "pepper"],
+            "ingredients": "beef fillet, mushrooms, puff pastry, prosciutto, English mustard, egg, olive oil, salt, pepper",
             "rating": 4.5
           },
           {
             "id": 2,
             "name": "Shepherd's Pie",
             "cooking_method": "Stovetop and oven",
-            "ingredients": ["ground lamb", "carrots", "onions", "peas", "beef broth", "Worcestershire sauce", "butter", "flour", "milk", "salt", "pepper", "nutmeg", "potatoes"],
+            "ingredients": "ground lamb, carrots, onions, peas, beef broth, Worcestershire sauce, butter, flour, milk, salt, pepper, nutmeg, potatoes",
             "rating": 4.2
           },
           {
             "id": 3,
             "name": "Lobster Risotto",
             "cooking_method": "Stovetop",
-            "ingredients": ["lobster tails", "arborio rice", "white wine", "chicken broth", "shallots", "garlic", "butter", "parmesan cheese", "lemon juice", "salt", "pepper"],
+            "ingredients": "lobster tails, arborio rice, white wine, chicken broth, shallots, garlic, butter, parmesan cheese, lemon juice, salt, pepper",
             "rating": 4.7
           }
         ]
@@ -34,28 +35,90 @@
         "name": "Jamie Oliver",
         "experience": 25,
         "recipesNum": 350,
-        "image": "https://d3a005dv9q91mu.cloudfront.net/uploads/2016/03/Frontera-10FEB2016-GALDONES-PHOTOGRAPHY-12-e1458242836944.jpg",
+        "description": "Jamie Oliver is the owner and chef of Dulce Patria, a restaurant in Mexico City that specializes in traditional Mexican cuisine with a modern twist. Ortiz has also written several cookbooks and has been recognized for her contributions to Mexican gastronomy.",
+        "image": "https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg",
         "recipes": [
           {
             "id": 1,
             "name": "Roast Chicken",
             "cooking_method": "Oven",
-            "ingredients": ["whole chicken", "lemons", "garlic", "thyme", "butter", "salt", "pepper"],
+            "ingredients": "whole chicken, lemons, garlic, thyme, butter, salt, pepper",
             "rating": 4.4
           },
           {
             "id": 2,
             "name": "Pesto Pasta",
             "cooking_method": "Stovetop",
-            "ingredients": ["pasta", "basil", "garlic", "pine nuts", "parmesan cheese", "olive oil", "lemon juice", "salt", "pepper"],
+            "ingredients": "pasta, basil, garlic, pine nuts, parmesan cheese, olive oil, lemon juice, salt, pepper",
             "rating": 4.1
           },
           {
             "id": 3,
             "name": "Fish and Chips",
             "cooking_method": "Fryer",
-            "ingredients": ["cod fillets", "potatoes", "flour", "baking powder", "beer", "malt vinegar", "salt"],
+            "ingredients": "cod fillets, potatoes, flour, baking powder, beer, malt vinegar, salt",
             "rating": 4.7
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Enrique Olvera",
+        "description": "Enrique Olvera is one of the most well-known chefs in Mexico, known for his modern takes on traditional Mexican cuisine. He is the owner of Pujol, one of the top restaurants in Mexico City, and has been featured on Chef's Table. Olvera has also opened several other restaurants, including Cosme in New York City.",
+        "experience": "Over 20 years of experience",
+        "image": "https://img.freepik.com/free-photo/portrait-handsome-male-chef-dressed-uniform_171337-5352.jpg",
+        "recipesNum": 200,
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Mole Poblano",
+                "cooking_method": "1. Toast the dried chiles, nuts, seeds, and spices in a dry skillet until fragrant. 2. Simmer the toasted ingredients with chicken broth, onions, garlic, and tomatoes until soft. 3. Blend the mixture until smooth and strain. 4. Heat the sauce and add chocolate and sugar to taste.",
+                "ingredients": "Dried chiles, nuts, seeds, spices, chicken broth, onions, garlic, tomatoes, chocolate, sugar",
+                "rating": 4.2
+            },
+            {
+                "id": 2,
+                "name": "Taco al Pastor",
+                "cooking_method": "1. Marinate thinly sliced pork in a blend of spices, pineapple, and vinegar for at least 2 hours. 2. Cook the pork on a vertical spit until crispy and browned. 3. Serve on a warm tortilla with chopped pineapple, onions, cilantro, and lime juice.",
+                "ingredients": "Pork, spices, pineapple, vinegar, tortillas, onions, cilantro, lime juice",
+                "rating": 4.7
+            },
+            {
+                "id": 3,
+                "name": "Chiles en Nogada",
+                "cooking_method": "1. Roast and peel poblano peppers and stuff with a mixture of ground meat, fruits, nuts, and spices. 2. Coat the stuffed peppers in a creamy walnut sauce. 3. Top with pomegranate seeds and parsley.",
+                "ingredients": "Poblano peppers, ground meat, fruits, nuts, spices, walnuts, cream, pomegranate seeds, parsley",
+                "rating": 4.9
+            }
+        ]
+    },
+    {
+      "id": 4,
+      "name": "Martha Ortiz",
+      "description": "Martha Ortiz is the owner and chef of Dulce Patria, a restaurant in Mexico City that specializes in traditional Mexican cuisine with a modern twist. Ortiz has also written several cookbooks and has been recognized for her contributions to Mexican gastronomy.",
+      "experience": "Over 25 years of experience",
+      "image": "https://dg1xqmhtoint1.cloudfront.net/img/vadodara/blog/blog-chef.webp?mtime=20220615123310&focal=none",
+      "recipesNum": 220,
+      "recipes": [
+          {
+              "id": 1,
+              "name": "Mole de Olla",
+              "cooking_method": "1. Simmer beef, pork, vegetables, and herbs in a large pot of water until tender. 2. Add corn and green beans and continue simmering until cooked. 3. Season with salt and chili powder to taste.",
+              "ingredients": "Beef, pork, vegetables, herbs, corn, green beans, salt, chili powder"
+          },
+          {
+            "id": 2,
+            "name": "Roast Chicken",
+            "cooking_method": "Oven",
+            "ingredients": "whole chicken, lemons, garlic, thyme, butter, salt, pepper",
+            "rating": 4.4
+          },
+          {
+            "id": 3,
+            "name": "Pesto Pasta",
+            "cooking_method": "Stovetop",
+            "ingredients": "pasta, basil, garlic, pine nuts, parmesan cheese, olive oil, lemon juice, salt, pepper",
+            "rating": 4.1
           }
         ]
       }
