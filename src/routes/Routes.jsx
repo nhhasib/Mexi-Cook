@@ -6,6 +6,7 @@ import Register from "../component/Register";
 import Login from "../component/Login";
 import ChefDetails from "../component/ChefDetails";
 import Blog from "../component/Blog";
+import PrivateRoutes from "../component/privateRoute/PrivateRoutes";
 
 const router=createBrowserRouter([
     {
@@ -30,7 +31,7 @@ const router=createBrowserRouter([
             },
             {
                 path:"/blog",
-                element:<Blog></Blog>
+                element:<PrivateRoutes><Blog></Blog></PrivateRoutes>
             }
         ]
     },

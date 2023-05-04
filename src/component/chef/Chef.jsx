@@ -7,12 +7,13 @@ import { AuthContext } from '../../provider/AuthProvider';
 const Chef = ({chefData}) => {
     const {id,image,name,recipesNum,experience}=chefData;
     // console.log(chefData);
-    const {setRecipes}=useContext(AuthContext);
+    const {setRecipes,setChef}=useContext(AuthContext);
 
     const handleRecipe=()=>{
         const recipes=chefData.recipes;
         console.log(recipes);
         setRecipes(recipes);
+        setChef(chefData);
     }
 
     return (
@@ -25,7 +26,7 @@ const Chef = ({chefData}) => {
             <h1>Experience: {experience} years</h1>
             <h1>Number of Recipes: {recipesNum}+</h1>
             </div>
-            <Link to="/chef/:id"><button onClick={handleRecipe}>View Recipes</button></Link>
+            <Link to={`/chef/${id}`}><button onClick={handleRecipe}>View Recipes</button></Link>
         </div>
     );
 };

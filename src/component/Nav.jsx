@@ -24,15 +24,14 @@ const Nav = ({children}) => {
         <h1 className="text-orange-700 font-bold text-4xl">MaxCook</h1>
         <div className="flex-1 justify-center">
           <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>
-          {/* <Link to="/recipes" className="btn btn-ghost normal-case text-xl">Recipes</Link> */}
           <Link to="/blog" className="btn btn-ghost normal-case text-xl">Blog</Link>
         </div>
 
         {user ? 
-          <div className="w-10 rounded-full">
+          <div>
             <h1>{user.displayName}</h1>
             {
-              user?.photoURL?<img className="rounded-full" src={user.photoURL} />:<img src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png"></img>
+              user?.photoURL?<img className="w-10 rounded-full mx-6" src={user.photoURL} />:<img className="w-10 rounded-full" src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png"></img>
             }
             <button onClick={handleLogout}>Logout</button>
           </div> : 

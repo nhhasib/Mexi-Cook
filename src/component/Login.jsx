@@ -5,48 +5,48 @@ import { GoogleAuthProvider, getAuth } from "firebase/auth";
 import app from "../../config_firebase";
 
 const Login = ({children}) => {
-    // const auth=getAuth(app);
-    // const provider=new GoogleAuthProvider();
 
-    const {loginUser,logOut,googleLogin}=useContext(AuthContext);
-    console.log(loginUser);
+    const {loginUser,logOut,googleLogin,setUser,gitLogin,user}=useContext(AuthContext);
 
     const handleLogin=event=>{
         const form=event.target;
         const email=form.email.value;
         const password=form.password.value;
+
         loginUser(email,password)
         .then(result=>
             {
-                const user=result.user;
-                console.log(user)
-        }
+                const loggedUser=result.user;
+                console.log(loggedUser)
+                setUser(loggedUser);
+                form.reset()
+            }
             )
         .catch(error=>{
             console.log(error)
         })
     }
-
     const handleGoogleLogin=()=>{
         googleLogin()
         .then(result=>{
             const user=result.user;
-            console.log(user);
+            setUser(user);
         })
         .catch(error=>{
             console.log(error)
         })
     }
-    // const handleGoogleLogin=()=>{
-    //     signInWithPopup(auth, provider)
-    //     .then(result=()=>{
-    //         const user=result.user;
-    //         console.log(user)
-    //     })
-    //     .catch(error=()=>{
-    //         console.log(error)
-    //     })
-    // }
+
+    const handleGithubLogin=()=>{
+        gitLogin()
+        .then(result=>{
+            const user=result.user;
+            setUser(user)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
 
   return (
     <div className="w-1/2 mx-auto my-10">
@@ -55,7 +55,7 @@ const Login = ({children}) => {
                     <p>Login to your Account</p>
                 </div>
 
-      <form className="mt-6" action="#" method="POST" onSubmit={handleLogin}>
+      <form className="mt-6" onSubmit={handleLogin}>
       <div className="flex -mx-3">
                         <div className="w-full px-3 mb-5">
                             <label  className="text-xs font-semibold px-1">Email</label>
@@ -91,7 +91,7 @@ const Login = ({children}) => {
             Log in with Google</span>
             </div>
           </button>
-      <button type="button" className="w-1/2 mx-auto mt-6 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
+      <button type="button" onClick={handleGithubLogin} className="w-1/2 mx-auto mt-6 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
             <div className="flex items-center justify-center">
             <img className="rounded-full w-8" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" />
             <span className="ml-4">
