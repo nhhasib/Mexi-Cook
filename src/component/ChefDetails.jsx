@@ -1,11 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import Recipe from './Recipe';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const ChefDetails = () => {
+    const {id} = useParams();
+   
+    const [chef, setChef] = useState([]);
 
-    const {recipes,chef}=useContext(AuthContext);
-    const {id,image,name,recipesNum,experience,description}=chef;
+    useEffect(()=>{
+        fetch(`https://maxi-cook-server-nhhasib.vercel.app/recipe/${id}`)
+        .then(res=>res.json())
+        .then(data=>setChef(data))
+    },[])
+    
+    const {image,name,recipes,recipesNum,experience,description}= chef;
+    console.log(recipes);
     
     return (
         <div className='w-11/12 mx-auto my-6 pb-6'>
@@ -20,7 +30,7 @@ const ChefDetails = () => {
             </div>
             <div className='grid md:grid-cols-3 gap-6'>
                 {
-                    recipes.map(data=><Recipe recipe={data} key={data.r_id}></Recipe>)
+                    recipes?.map(data=><Recipe recipe={data} key={data.id}></Recipe>)
                 }
             </div>
         </div>

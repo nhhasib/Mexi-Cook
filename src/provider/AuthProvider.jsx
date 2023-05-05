@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading]= useState(true);
     const [currentUser, setUserName]= useState();
     const [datas,setDatas]=useState([]);
-    const [chef,setChef]=useState(null)
+    const [chef,setChef]=useState({})
     const [recipes,setRecipes]=useState([])
     // useEffect(()=>{
     //     const unsubscribe=onAuthStateChanged(auth,currentUser=>{
@@ -28,7 +28,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
         fetch("https://maxi-cook-server-nhhasib.vercel.app/recipe")
         .then(res=>res.json())
-        .then(datas=>setDatas(datas))
+        .then(data=>setDatas(data))
     },[])
 
     

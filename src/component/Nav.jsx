@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { getAuth, signOut } from "firebase/auth";
 import { getApp } from "firebase/app";
 import app from "../../config_firebase";
+import ActiveLink from "./activeLink/ActiveLink";
 
 const Nav = ({children}) => {
     const {user,setLoading,setUser}=useContext(AuthContext);
@@ -29,8 +30,8 @@ const Nav = ({children}) => {
       <div className="navbar bg-base-100 justify-between grid md:flex">
         <h1 className="text-orange-700 font-bold text-4xl">MaxCook</h1>
         <div className="justify-center flex-col md:flex-row">
-          <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>
-          <Link to="/blog" className="btn btn-ghost normal-case text-xl">Blog</Link>
+          <ActiveLink to="/" className="btn btn-ghost normal-case text-xl">Home</ActiveLink>
+          <ActiveLink to="/blog" className="btn btn-ghost normal-case text-xl">Blog</ActiveLink>
         </div>
 
         {user ? 
