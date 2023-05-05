@@ -1,23 +1,32 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
+import { getAuth, signOut } from "firebase/auth";
+import { getApp } from "firebase/app";
+import app from "../../config_firebase";
 
 const Nav = ({children}) => {
-    const {user,logOut,setLoading}=useContext(AuthContext);
+  // const history = useHistory()
+    const {user,logOut,setLoading,setUser}=useContext(AuthContext);
+    const navigate=useNavigate();
+    const auth=getAuth(app);
     // console.log(user.photoURL)
 
-    const handleLogout=()=>{
-      logOut()
+    const handleLogout=async ()=>{
+      signOut(auth)
       .then(() => {
+        setUser('')
         console.log("signout")
+        navigate('/')
+        toast.error('Successfully logout');
       })
       .catch((error) => {
         console.log(error)
       });
       setLoading(false)
-
-      
     }
+
     console.log(user)
 
   return (
@@ -33,11 +42,16 @@ const Nav = ({children}) => {
           <div>
             <h1>{user.displayName}</h1>
             {
-              user?.photoURL?<img className="w-10 rounded-full mx-6" src={user.photoURL} />:<img className="w-10 rounded-full" src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png"></img>
+              user?.photoURL?<div className="tooltip" data-tip={user.displayName}>
+              <img className="w-10 h-10 rounded-full mx-6" src={user.photoURL} />
+            </div>
+            :<div className="tooltip" data-tip={user.displayName}>
+            <img className="w-10 h-10 rounded-full" src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png"></img>
+            </div>
             }
-            <button onClick={handleLogout}>Logout</button>
+            <button className="btn-custom ml-4" onClick={handleLogout}>Logout</button>
           </div> : 
-          <Link to="/login"><button>Login</button></Link>
+          <Link to="/login"><button className="btn-custom">Login</button></Link>
         }
       </div>
       

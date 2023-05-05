@@ -4,13 +4,13 @@ import Chef from './chef/Chef';
 
 const Chefs = ({children}) => {
     const {datas}=useContext(AuthContext);
-    // console.log(datas)
+    console.log(datas)
     return (
         <div className='w-4/5 mx-auto mt-10'>
             <h1 className='title my-10'>Our Chefs</h1>
             <div className='grid md:grid-cols-2 gap-10'>
             {
-            datas.map(data=><Chef chefData={data}></Chef>)
+            datas.map(data=><Chef key={data.id} chefData={data}></Chef>)
             }
             </div>
         </div>
