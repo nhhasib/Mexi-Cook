@@ -38,7 +38,7 @@ const AuthProvider = ({children}) => {
             setUserName(user);
             setLoading(false)
         })
-        return unsubscribe;
+        return unsubscribe();
     }, [])
     //signup
     async function createUser(email, password, username,photo){
