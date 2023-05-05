@@ -25,7 +25,7 @@ const Chef = ({chefData}) => {
 
     return (
         <div className='container'>
-            <div className='img-container'>
+            <div className='img-container w-4/5 mx-auto'>
                 <img src={image} alt="" />
             </div>
             <button onClick={handleLike}><FontAwesomeIcon icon={faThumbsUp} className='text-2xl text-blue-600' /></button>

@@ -15,7 +15,7 @@ const Banner = () => {
             <a href="#slide3" className="btn btn-circle">
               ❮
             </a>
-            <h1 className="text-white font-bold w-4/5 text-6xl">Welcome to Mexican foods</h1>
+            <h1 className="text-white font-bold w-4/5 text-4xl md:text-6xl">Welcome to Mexican foods</h1>
             <a href="#slide2" className="btn btn-circle">
               ❯
             </a>
@@ -29,7 +29,7 @@ const Banner = () => {
             <a href="#slide1" className="btn btn-circle">
               ❮
             </a>
-            <h1 className="text-white font-bold text-4xl w-4/5">Spice up your life with MexiCook - the ultimate destination for authentic Mexican recipes and culinary inspiration!</h1>
+            <h1 className="text-white font-bold text-2xl md:text-4xl w-4/5">Spice up your life with MexiCook - the ultimate destination for authentic Mexican recipes and culinary inspiration!</h1>
             <a href="#slide3" className="btn btn-circle">
               ❯
             </a>
@@ -43,7 +43,7 @@ const Banner = () => {
             <a href="#slide2" className="btn btn-circle">
               ❮
             </a>
-            <h1 className="text-white font-bold text-xl w-4/5">MexiCook is a website that offers a wealth of information and resources related to Mexican cuisine. The website features a diverse range of authentic Mexican recipes, from classic favorites like guacamole and tacos to lesser-known dishes like chiles en nogada and cochinita pibil. Each recipe is accompanied by beautiful photography and detailed instructions, making it easy for even novice cooks to recreate the flavors and textures of Mexican cuisine.</h1>
+            <h1 className="text-white font-bold text-sm md:text-xl w-4/5">MexiCook is a website that offers a wealth of information and resources related to Mexican cuisine. The website features a diverse range of authentic Mexican recipes, from classic favorites like guacamole and tacos to lesser-known dishes like chiles en nogada and cochinita pibil.</h1>
             <a href="#slide1" className="btn btn-circle">
               ❯
             </a>

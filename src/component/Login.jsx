@@ -57,7 +57,7 @@ const Login = ({children}) => {
     }
 
   return (
-    <div className="w-1/2 mx-auto my-10">
+    <div className="md:w-1/2 w-4/5 mx-auto my-10 pb-10">
                 <div className="text-center mb-10">
                     <h1 className="font-bold text-3xl text-gray-900">LOGIN</h1>
                     <p>Login to your Account</p>
@@ -87,19 +87,19 @@ const Login = ({children}) => {
         <div className="text-center mb-6">
           <a href="#" className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
         </div>
-        <div className="text-center btn-custom w-1/2 mx-auto"><button type=' submit' className="w-1/2">Login</button></div>
+        <div className="text-center btn-custom w-4/5 md:w-1/2 mx-auto"><button type=' submit'>Login</button></div>
       </form>
 
       <hr className="my-10" />
 
-      <button type="button" onClick={handleGoogleLogin} className="w-1/2 mx-auto btn mt-6 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
+      <button type="button" onClick={handleGoogleLogin} className="w-4/5 md:w-1/2 mx-auto btn mt-6 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
             <div className="flex items-center justify-center">
             <img className="rounded-full w-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/706px-Google_%22G%22_Logo.svg.png" alt="" />
             <span className="ml-4">
             Log in with Google</span>
             </div>
           </button>
-      <button type="button" onClick={handleGithubLogin} className="w-1/2 mx-auto mt-6 block btn bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
+      <button type="button" onClick={handleGithubLogin} className="w-4/5 md:w-1/2 mx-auto mt-6 block btn bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-2 border border-gray-300">
             <div className="flex items-center justify-center">
             <img className="rounded-full w-8" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" />
             <span className="ml-4">

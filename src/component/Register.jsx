@@ -14,26 +14,7 @@ const Register = ({ children }) => {
     const username = form.name.value;
     const photo = form.photo.value;
 
-    console.log(email, name, password, photo);
-
     createUser(email, password, username,photo);
-
-    // createUser(email, password)
-    //   .then((result) => {
-    //     const user = result.user;
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-
-    // const auth = getAuth();
-
-    // updateProfile(auth.currentUser, {
-    //   displayName: name,
-    //   photoURL: photo,
-    // })
-    //   .then(() => {})
-    //   .catch((error) => {});
   };
 
   return (

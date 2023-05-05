@@ -7,39 +7,34 @@ import { getApp } from "firebase/app";
 import app from "../../config_firebase";
 
 const Nav = ({children}) => {
-  // const history = useHistory()
-    const {user,logOut,setLoading,setUser}=useContext(AuthContext);
+    const {user,setLoading,setUser}=useContext(AuthContext);
     const navigate=useNavigate();
     const auth=getAuth(app);
-    // console.log(user.photoURL)
 
     const handleLogout=async ()=>{
       signOut(auth)
       .then(() => {
-        setUser('')
-        console.log("signout")
-        navigate('/')
+        setUser('');
+        navigate('/');
         toast.error('Successfully logout');
       })
       .catch((error) => {
-        console.log(error)
+        toast.error(error)
       });
       setLoading(false)
     }
 
-    console.log(user)
-
   return (
     <nav className="w-4/5 mx-auto mt-8">
-      <div className="navbar bg-base-100 justify-between md:flex">
+      <div className="navbar bg-base-100 justify-between grid md:flex">
         <h1 className="text-orange-700 font-bold text-4xl">MaxCook</h1>
-        <div className="flex-1 justify-center">
+        <div className="justify-center flex-col md:flex-row">
           <Link to="/" className="btn btn-ghost normal-case text-xl">Home</Link>
           <Link to="/blog" className="btn btn-ghost normal-case text-xl">Blog</Link>
         </div>
 
         {user ? 
-          <div>
+          <div className="flex-col md:flex-row">
             <h1>{user.displayName}</h1>
             {
               user?.photoURL?<div className="tooltip" data-tip={user.displayName}>
